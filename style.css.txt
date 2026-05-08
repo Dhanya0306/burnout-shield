@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #050816, #0a0f2c, #000000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.1);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-card {
+  padding: 40px;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00f5ff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #b300ff;
+}
+
+p {
+  line-height: 1.6;
+  color: #cfd6ff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00f5ff, #b300ff);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(179,0,255,0.6);
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 20px;
+}
+
+/* CARDS */
+.card {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* FORM */
+.form-grid {
+  display: grid;
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.feature-card {
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+/* RESULTS */
+#results {
+  min-height: 120px;
+  transition: 0.5s;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9rem;
+}

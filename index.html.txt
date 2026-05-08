@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burnout Shield - Early Stress Detection System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="glass hero-card">
+      <h1>Detect Stress Before Burnout Happens</h1>
+      <p>
+        Burnout Shield is an AI-powered emotional wellness and behavioral analysis platform designed to identify hidden stress patterns, emotional strain, and burnout risk before severe psychological exhaustion occurs.
+      </p>
+      <button onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
+        Start Stress Analysis
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>About Burnout Shield</h2>
+    <div class="glass card">
+      <p>
+        Burnout Shield helps students and professionals monitor emotional wellbeing through behavioral analysis and intelligent stress detection. The system analyzes lifestyle patterns and emotional indicators to provide early burnout prediction and preventive wellness recommendations.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="section" id="form">
+    <h2>Stress Analysis</h2>
+
+    <div class="glass card form-grid">
+
+      <label>Sleep Hours
+        <input type="range" id="sleep" min="1" max="12" value="6">
+      </label>
+
+      <label>Screen Time (hrs)
+        <input type="number" id="screen" value="5">
+      </label>
+
+      <label>Workload Intensity
+        <input type="range" id="workload" min="1" max="10" value="5">
+      </label>
+
+      <label>Mood Level
+        <select id="mood">
+          <option value="5">😄 Happy</option>
+          <option value="4">😊 Good</option>
+          <option value="3">😐 Neutral</option>
+          <option value="2">😔 Sad</option>
+          <option value="1">😣 Stressed</option>
+        </select>
+      </label>
+
+      <label>Social Interaction
+        <input type="range" id="social" min="1" max="10" value="5">
+      </label>
+
+      <label>Stress Feelings
+        <select id="stress">
+          <option>Never</option>
+          <option>Sometimes</option>
+          <option>Often</option>
+          <option>Always</option>
+        </select>
+      </label>
+
+      <button onclick="analyzeStress()">Analyze Mental Wellness</button>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section">
+    <h2>Results Dashboard</h2>
+    <div class="glass card" id="results">
+      <p>Fill the form and click analyze to view insights.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2>Features</h2>
+    <div class="features">
+
+      <div class="glass feature-card">🤖 AI Stress Detection</div>
+      <div class="glass feature-card">📊 Burnout Prediction</div>
+      <div class="glass feature-card">🧠 Emotional Pattern Analysis</div>
+      <div class="glass feature-card">📡 Behavioral Monitoring</div>
+      <div class="glass feature-card">💡 Wellness Recommendations</div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Burnout Shield © 2026 | AI-Powered Emotional Wellness Monitoring System
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

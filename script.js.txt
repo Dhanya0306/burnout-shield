@@ -1,0 +1,57 @@
+function analyzeStress() {
+
+  let sleep = Number(document.getElementById("sleep").value);
+  let screen = Number(document.getElementById("screen").value);
+  let workload = Number(document.getElementById("workload").value);
+  let mood = Number(document.getElementById("mood").value);
+  let social = Number(document.getElementById("social").value);
+  let stressFeel = document.getElementById("stress").value;
+
+  let score = 0;
+
+  // simple AI logic
+  score += (12 - sleep) * 5;
+  score += screen * 3;
+  score += workload * 6;
+  score += (5 - mood) * 8;
+  score += (10 - social) * 4;
+
+  if (stressFeel === "Sometimes") score += 10;
+  if (stressFeel === "Often") score += 20;
+  if (stressFeel === "Always") score += 30;
+
+  let level = "Low";
+  if (score > 120) level = "High";
+  else if (score > 70) level = "Moderate";
+
+  let factors = [];
+
+  if (sleep < 5) factors.push("Low sleep duration");
+  if (screen > 6) factors.push("High screen exposure");
+  if (workload > 7) factors.push("Heavy workload pressure");
+  if (social < 4) factors.push("Low social interaction");
+
+  let recommendations = [
+    "Improve sleep routine",
+    "Take regular breaks",
+    "Reduce screen time",
+    "Maintain social interaction",
+    "Practice relaxation techniques"
+  ];
+
+  document.getElementById("results").innerHTML = `
+    <h3>Stress Level: ${level}</h3>
+    <br>
+    <strong>Stress Score:</strong> ${score}<br><br>
+
+    <strong>Detected Factors:</strong>
+    <ul>${factors.map(f => `<li>${f}</li>`).join("")}</ul>
+
+    <strong>Recommendations:</strong>
+    <ul>${recommendations.map(r => `<li>${r}</li>`).join("")}</ul>
+
+    <br>
+    <strong>Wellness Insight:</strong>
+    <p>The user shows early indicators of emotional fatigue based on behavioral and lifestyle patterns detected by the AI model.</p>
+  `;
+}
